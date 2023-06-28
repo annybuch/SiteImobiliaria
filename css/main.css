@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+html{
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-behavior: smooth;
+scroll-padding-top: 7rem;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+font-size: 16px;
+background-color:rgba(13, 54, 83, 1);
+}
+
+
+/* Inico style menu */
+header {
+/* barra preta menu */
+margin: 0px;
+width: 100%;
+background-color: rgb(0, 0, 0, 0.5);
+height: 60px;
+display: flex;
+align-items:center;
+justify-content: center;  /* Centralizar horizontalmente */
+}
+
+header .menu .logo img {
+/* logo menu */
+margin-left: 80px;
+display: flex;
+align-items: center;
+}
+
+header .menu a {
+/* palavras do menu */
+margin: o 40px;
+margin-right: auto;
+margin: 10px;
+margin-left: 45px;
+color: white;
+font-size: 15px;
+text-decoration: none;
+text-align: center;
+}
+
+header .menu a:hover {
+/* palavras Ficar amarelo ao passar o mouse */
+color:var(--blue);
+color: rgba(250, 210, 25, 1);
+}
+
+button {
+/* botões geral */
+all: unset;
+cursor: pointer;
+outline: revert;
+transition: 400ms;
+}
+
+header button {
+/* botão telefone menu */
+margin-right: auto;
+margin-left: 30px;
+display: flex;
+align-items: center;
+}
+/* Fim do style menu */
+
+
+
+/* Inicio das Imagens da primeira parte da página  */
+h1 {
+/* Frase da página 'O imóvel que você procura está aqui' */
+position: absolute;
+width: 600px;
+height: 10px;
+left: 700px;
+top: 440px;
+
+font-family: 'Radio Canada';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 100%;
+/* or 50px */
+
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Classe1 {
+/* Letra em azul da frase da página 'O imóvel que você procura está aqui' */
+color: rgba(0, 174, 238, 1)
+}
+
+.parte1 img {
+/* Logo em branco */
+position: absolute;
+left: 770px;
+top: 77px;
+}
+
+.pretoblur2 {
+/* Blur de fundo */
+position: absolute;
+width: 300px;
+height: 300px;
+left: 800px;
+top: 150px;
+			
+background: #01111f;
+filter: blur(146.137px);
+}
+
+.blur {
+/* Blur de fundo */
+position: absolute;
+width: 300px;
+height: 300px;
+left: 800px;
+top: 150px;
+	
+background: rgb(215, 239, 255, 0.6);
+mix-blend-mode: color-dodge;
+filter: blur(146.137px);
+}
+
+.blur2 {
+/* Blur de fundo */
+position: absolute;
+width: 350px;
+height: 380px;
+left: 100px;
+top: 400px;
+			
+background: rgba(166, 218, 255, 0.81);
+mix-blend-mode: color-dodge;
+filter: blur(146.137px);
+}
+
+.predio {
+/* Imagem de predio */
+position: absolute;
+left: .95%;
+right: 63.2%;
+top: 25%;
+bottom: 73.81%;
+}
+
+.tiras {
+/* 'textura' fundo */
+width: 346.77px;
+height: 47.62px;
+left: 190px;
+top: 11px;
+}
+/* Fim das imagens da primeira parte da página */
+
+
+
+/* Inicio da segunda parte da página, painel de "encontre seu imóvel" */
+.encontre {
+/* Retangulo amarelo com Titulo 'Encontre seu imóvel' */
+position: absolute;
+width: 681.37px;
+height: 53.74px;
+left: -22px;
+top: 700px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));    /* sombra do painel */
+}
+
+.pesquisa {
+/* Painel de buscar imóveis e foto do casal pegando a chave */
+position: absolute;
+top: 560px;
+left: -100px;
+}
+
+.quarto {
+/* quartos */
+position: absolute;
+width: 66.37px;
+height: 12px;
+left: 300.45px;
+top: 1070.88px;
+
+font-family: 'Alatsi';
+font-style: normal;
+font-weight: 900;
+font-size: 14.064px;
+line-height: 11px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.quantosq {
+/* Nº de quartos  */
+position: absolute;
+width: 66.37px;
+height: 12px;
+left: 300.45px;
+top: 1095.88px;
+
+font-family: 'Abel';
+font-style: normal;
+font-weight: 400;
+font-size: 12.622px;
+line-height: 10px;
+/* or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.dinheiro {
+/* Imóveis até */
+position: absolute;
+width: 66.37px;
+height: 18px;
+left: 475.45px;
+top: 1070.88px;
+
+font-family: 'Alatsi';
+font-style: normal;
+font-weight: 900;
+font-size: 14.064px;
+line-height: 11px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.quantosd {
+/*  Escolha o valor */
+position: absolute;
+width: 66.37px;
+height: 18px;
+left: 475.45px;
+top: 1095.88px;
+    
+font-family: 'Abel';
+font-style: normal;
+font-weight: 400;
+font-size: 12.622px;
+line-height: 10px;
+/* or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.bairro {
+/* Bairro */
+position: absolute;
+width: 66.37px;
+height: 18px;
+left: 300.45px;
+top: 990.88px;
+    
+font-family: 'Alatsi';
+font-style: normal;
+font-weight: 900;
+font-size: 14.064px;
+line-height: 11px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.quantosb {
+/* Busque por bairro */
+position: absolute;
+width: 66.37px;
+height: 18px;
+left: 300.45px;
+top: 1010.88px;
+    
+font-family: 'Abel';
+font-style: normal;
+font-weight: 400;
+font-size: 12.622px;
+line-height: 10px;
+/* or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.cidade {
+/* Cidade */
+position: absolute;
+width: 66.37px;
+height: 18px;
+left: 300.45px;
+top: 920.88px;
+    
+font-family: 'Alatsi';
+font-style: normal;
+font-weight: 900;
+font-size: 14.064px;
+line-height: 11px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000; 
+}
+
+.quantosc {
+/* Buscar por cidade */
+position: absolute;
+width: 66.37px;
+height: 18px;
+left: 300.45px;
+top: 940.88px;
+    
+font-family: 'Abel';
+font-style: normal;
+font-weight: 400;
+font-size: 12.622px;
+line-height: 10px;
+ /* or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.857327px;
+color: #000000;
+}
+
+.consultarp {
+/* Medidas do botão */
+position: absolute;
+width: 300.79px;
+height: 67.01px;
+left: 255.76px;
+top: 1140.2px;
+    
+/* Fonte e posição do texto dentro do botão*/
+font-family: 'Alatsi';
+font-style: bold;
+font-weight: 10;
+font-size: 26.9786px;
+line-height: 22px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+    
+/* Botão, cor, sombra e borda */
+color: #000000;
+background: #d0b436;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25); 
+border-radius: 200px;
+}
+
+.seta1 {
+/* Botões de setas do painel para cliclar e aparecer as opções*/
+position: absolute;
+width: 15.12px;
+height: 14.5px;
+left: 550.14px;
+top: 997.5px;
+}
+
+.seta2 {
+/* Botões de setas do painel para cliclar e aparecer as opções*/
+position: absolute;
+width: 15.12px;
+height: 14.5px;
+left: 550.14px;
+top: 923.5px;
+}
+
+.seta3 {
+/* Botões de setas do painel para cliclar e aparecer as opções*/
+position: absolute;
+width: 15.12px;
+height: 14.5px;
+left: 550.14px;
+top: 1070.5px;
+}
+
+.seta4 {
+/* Botões de setas do painel para cliclar e aparecer as opções*/
+position: absolute;
+width: 15.12px;
+height: 14.5px;
+left: 375.14px;
+top: 1070.5px;
+}
+/* da segunda parte da página, painel de "encontre seu imóvel */
