@@ -1,409 +1,378 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-
-html{
-font-size: 62.5%;
-overflow-x: hidden;
-scroll-behavior: smooth;
-scroll-padding-top: 7rem;
-}
-
+/* Estilos gerais */
 body {
-margin: 0;
-padding: 0;
-font-family: 'Poppins', sans-serif;
-font-size: 16px;
-background-color:rgba(13, 54, 83, 1);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #202020;
+  background-color: rgb(218, 218, 218);
+  align-items: center;
 }
 
 
-/* Inico style menu */
+/* Menu lateral */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(2, 16, 36, 0.813);
+  transition: left 0.3s ease-in-out;
+  z-index: 101;
+}
+
+.menu-lateral .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.menu-lateral .menu a {
+  font-weight: 200;
+  margin: 10px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: rgba(250, 210, 25, 1);
+}
+/* Fim do menu lateral */
+
+
+
+/* Menu */
 header {
-/* barra preta menu */
-margin: 0px;
-width: 100%;
-background-color: rgb(0, 0, 0, 0.5);
-height: 60px;
-display: flex;
-align-items:center;
-justify-content: center;  /* Centralizar horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(2, 16, 36, 0.813);
+  height: 60px;
+  position: relative;
 }
 
-header .menu .logo img {
-/* logo menu */
-margin-left: 80px;
-display: flex;
-align-items: center;
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 70px;
+  height: 70px;
+  margin-left: 1260px;
+}
+
+header .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 header .menu a {
-/* palavras do menu */
-margin: o 40px;
-margin-right: auto;
-margin: 10px;
-margin-left: 45px;
-color: white;
-font-size: 15px;
-text-decoration: none;
-text-align: center;
+  font-weight: 200;
+  margin: 10px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-header .menu a:hover {
-/* palavras Ficar amarelo ao passar o mouse */
-color:var(--blue);
-color: rgba(250, 210, 25, 1);
+.menu-toggle {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 24px;
+  z-index: 102;
+  color: #F5F5F5;
 }
 
-button {
-/* botões geral */
-all: unset;
-cursor: pointer;
-outline: revert;
-transition: 400ms;
+
+
+/* Página Inicial */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px); /* min-height para garantir que o conteúdo ocupe pelo menos a altura da janela */
 }
 
-header button {
-/* botão telefone menu */
-margin-right: auto;
-margin-left: 30px;
-display: flex;
-align-items: center;
+.logo2 {
+  display: block;
+  margin: auto; /* Centraliza horizontalmente */
+  width: 150px;
+  height: auto;
+  margin-top: 50px; /* Margem superior para centralizar o logo */
 }
-/* Fim do style menu */
 
-
-
-/* Inicio das Imagens da primeira parte da página  */
 h1 {
-/* Frase da página 'O imóvel que você procura está aqui' */
-position: absolute;
-width: 600px;
-height: 10px;
-left: 700px;
-top: 440px;
-
-font-family: 'Radio Canada';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 100%;
-/* or 50px */
-
-letter-spacing: 0.03em;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 70px;
+  color: rgba(13, 54, 83, 1);
+  margin: 0px;
+  text-align: center;
 }
 
-.Classe1 {
-/* Letra em azul da frase da página 'O imóvel que você procura está aqui' */
-color: rgba(0, 174, 238, 1)
+.paragrafo2 {
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 25px;
+  color: rgb(69, 69, 69);
 }
 
-.parte1 img {
-/* Logo em branco */
-position: absolute;
-left: 770px;
-top: 77px;
+@media (max-width: 1024px) {      /* Responsividade das fotos Maximo de tela 1024px */
+  .logo2 {
+      display: inline-block;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
 }
 
-.pretoblur2 {
-/* Blur de fundo */
-position: absolute;
-width: 300px;
-height: 300px;
-left: 800px;
-top: 150px;
-			
-background: #01111f;
-filter: blur(146.137px);
+@media (max-width: 1050px) {     /* Responsividade das fotos Maximo de tela 1050px */
+  .logo2 {
+      display: inline-block;   
+  }
 }
 
-.blur {
-/* Blur de fundo */
-position: absolute;
-width: 300px;
-height: 300px;
-left: 800px;
-top: 150px;
-	
-background: rgb(215, 239, 255, 0.6);
-mix-blend-mode: color-dodge;
-filter: blur(146.137px);
+@media (max-width: 480px) {      /* Responsividade das fotos Maximo de tela 480px */
+  .logo2 {
+      display: inline-block;     
+  }
 }
 
-.blur2 {
-/* Blur de fundo */
-position: absolute;
-width: 350px;
-height: 380px;
-left: 100px;
-top: 400px;
-			
-background: rgba(166, 218, 255, 0.81);
-mix-blend-mode: color-dodge;
-filter: blur(146.137px);
+
+/* Caixas em Destaque */
+.featured-boxes {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to top, #031D3B, rgb(218, 218, 218));
+  background-color: #031D3B;
+  border-radius: 100px;
 }
 
-.predio {
-/* Imagem de predio */
-position: absolute;
-left: .95%;
-right: 63.2%;
-top: 25%;
-bottom: 73.81%;
+.featured-box {
+  flex-basis: calc(33.33% - 10px); /* Distribui igualmente em telas maiores */
+  margin-bottom: 20px;
+  background-color: #03152cb0;
+  padding: 20px;
+  margin: 10px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  
 }
 
-.tiras {
-/* 'textura' fundo */
-width: 346.77px;
-height: 47.62px;
-left: 190px;
-top: 11px;
-}
-/* Fim das imagens da primeira parte da página */
-
-
-
-/* Inicio da segunda parte da página, painel de "encontre seu imóvel" */
-.encontre {
-/* Retangulo amarelo com Titulo 'Encontre seu imóvel' */
-position: absolute;
-width: 681.37px;
-height: 53.74px;
-left: -22px;
-top: 700px;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));    /* sombra do painel */
+.featured-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.pesquisa {
-/* Painel de buscar imóveis e foto do casal pegando a chave */
-position: absolute;
-top: 560px;
-left: -100px;
+.featured-box h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
-.quarto {
-/* quartos */
-position: absolute;
-width: 66.37px;
-height: 12px;
-left: 300.45px;
-top: 1070.88px;
-
-font-family: 'Alatsi';
-font-style: normal;
-font-weight: 900;
-font-size: 14.064px;
-line-height: 11px;
-/* identical to box height, or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.symbol {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
-.quantosq {
-/* Nº de quartos  */
-position: absolute;
-width: 66.37px;
-height: 12px;
-left: 300.45px;
-top: 1095.88px;
-
-font-family: 'Abel';
-font-style: normal;
-font-weight: 400;
-font-size: 12.622px;
-line-height: 10px;
-/* or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.featured-box p {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 30px;
 }
 
-.dinheiro {
-/* Imóveis até */
-position: absolute;
-width: 66.37px;
-height: 18px;
-left: 475.45px;
-top: 1070.88px;
-
-font-family: 'Alatsi';
-font-style: normal;
-font-weight: 900;
-font-size: 14.064px;
-line-height: 11px;
-/* identical to box height, or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.consult-button {
+  background-color: #F5F5F5;
+  color: #0B2E5C;
+  border: none;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
-.quantosd {
-/*  Escolha o valor */
-position: absolute;
-width: 66.37px;
-height: 18px;
-left: 475.45px;
-top: 1095.88px;
-    
-font-family: 'Abel';
-font-style: normal;
-font-weight: 400;
-font-size: 12.622px;
-line-height: 10px;
-/* or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.box-lateral h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #202020;
 }
 
-.bairro {
-/* Bairro */
-position: absolute;
-width: 66.37px;
-height: 18px;
-left: 300.45px;
-top: 990.88px;
-    
-font-family: 'Alatsi';
-font-style: normal;
-font-weight: 900;
-font-size: 14.064px;
-line-height: 11px;
-/* identical to box height, or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.about-us-box {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #03152cb0;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  max-width: 80%;
 }
 
-.quantosb {
-/* Busque por bairro */
-position: absolute;
-width: 66.37px;
-height: 18px;
-left: 300.45px;
-top: 1010.88px;
-    
-font-family: 'Abel';
-font-style: normal;
-font-weight: 400;
-font-size: 12.622px;
-line-height: 10px;
-/* or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.about-us-box h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #F5F5F5;
 }
 
-.cidade {
-/* Cidade */
-position: absolute;
-width: 66.37px;
-height: 18px;
-left: 300.45px;
-top: 920.88px;
-    
-font-family: 'Alatsi';
-font-style: normal;
-font-weight: 900;
-font-size: 14.064px;
-line-height: 11px;
-/* identical to box height, or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000; 
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.quantosc {
-/* Buscar por cidade */
-position: absolute;
-width: 66.37px;
-height: 18px;
-left: 300.45px;
-top: 940.88px;
-    
-font-family: 'Abel';
-font-style: normal;
-font-weight: 400;
-font-size: 12.622px;
-line-height: 10px;
- /* or 80% */
-display: flex;
-align-items: center;
-letter-spacing: 0.857327px;
-color: #000000;
+.about-us-content p {
+  font-size: 19px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
 }
 
-.consultarp {
-/* Medidas do botão */
-position: absolute;
-width: 300.79px;
-height: 67.01px;
-left: 255.76px;
-top: 1140.2px;
-    
-/* Fonte e posição do texto dentro do botão*/
-font-family: 'Alatsi';
-font-style: bold;
-font-weight: 10;
-font-size: 26.9786px;
-line-height: 22px;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-    
-/* Botão, cor, sombra e borda */
-color: #000000;
-background: #d0b436;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25); 
-border-radius: 200px;
+.about-us-content img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
 }
 
-.seta1 {
-/* Botões de setas do painel para cliclar e aparecer as opções*/
-position: absolute;
-width: 15.12px;
-height: 14.5px;
-left: 550.14px;
-top: 997.5px;
+.faq-box {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #03152cb0;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  max-width: 80%;
 }
 
-.seta2 {
-/* Botões de setas do painel para cliclar e aparecer as opções*/
-position: absolute;
-width: 15.12px;
-height: 14.5px;
-left: 550.14px;
-top: 923.5px;
+.faq-box h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #F5F5F5;
 }
 
-.seta3 {
-/* Botões de setas do painel para cliclar e aparecer as opções*/
-position: absolute;
-width: 15.12px;
-height: 14.5px;
-left: 550.14px;
-top: 1070.5px;
+.faq-question {
+  margin-bottom: 20px;
 }
 
-.seta4 {
-/* Botões de setas do painel para cliclar e aparecer as opções*/
-position: absolute;
-width: 15.12px;
-height: 14.5px;
-left: 375.14px;
-top: 1070.5px;
+.faq-question h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #F5F5F5;
+  cursor: pointer;
 }
-/* da segunda parte da página, painel de "encontre seu imóvel */
+
+.faq-answer {
+  display: none;
+  font-size: 16px;
+  color: #F5F5F5;
+}
+
+
+
+.sales-page {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #03152cb0;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  max-width: 80%;
+}
+
+.sales-page h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #F5F5F5;
+}
+
+.sales-gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.sales-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sales-image {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  color: #031D3B;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+
+
+/* Rodapé */
+footer {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.47);
+  color: #F5F5F5;      
+}
